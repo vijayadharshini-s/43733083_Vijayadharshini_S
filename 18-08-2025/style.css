@@ -1,0 +1,70 @@
+ body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+#box-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#box {
+  background: #3498db; /* Content */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: 5px solid rgb(222, 219, 36);
+  padding: 30px;
+  margin: 20px;
+
+  /* add this */
+  outline: 20px solid rgba(255, 0, 0, 0.3); /* Red transparent margin area */
+}
+
+.controls {
+  margin: 20px auto;
+  width: 300px;
+  text-align: left;
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.controls label {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+input[type="range"] {
+  width: 150px;
+}
+
+.legend {
+  text-align: left;
+  margin: 30px auto;
+  width: 400px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.margin { border: 1px dashed black; background: transparent; }
+.border { background: orange; }
+.padding { background: gold; }
+.content { background: #3498db; }
+
+“Cloud computing is the delivery of computing services like storage, networking, databases, and AI over the internet.
+ Google Cloud provides these in different service models (IaaS, PaaS, SaaS) with benefits like cost efficiency,
+  scalability, and access from anywhere.
+  For example, instead of setting up servers on-premise, a company can quickly spin up VMs on
+   Google Compute Engine or analyze data with BigQuery, paying only for what they use.”
