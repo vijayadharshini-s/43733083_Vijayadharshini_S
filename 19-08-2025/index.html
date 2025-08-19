@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('assets/image.png');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 50px 80px 30px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            text-align: left;
+            position: relative;
+        }
+
+        .header .info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .header .info h1 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .header .info p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        .profile-container {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid white;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main-content {
+            width: 100%;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .top-content, .bottom-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            width: 100%;
+            max-width: 1100px;
+            justify-content: center;
+        }
+
+        .top-content {
+            margin-bottom: 50px;
+        }
+
+        .content-box {
+            flex: 1;
+            min-width: 450px;
+            padding: 25px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .content-box:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-box h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+
+        .content-box ul {
+            list-style-type: square;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+
+        .footer {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 2px solid white;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="info">
+            <h1>Vijayadharshini S</h1>
+            <p>II Year, BE CSE (Data Science)<br>Sathyabama University</p>
+        </div>
+        <div class="profile-container">
+            <img src="assets/image1.png" alt="Your Profile Picture" class="profile-pic">
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="top-content">
+            <div class="content-box">
+                <h2>10th Grade</h2>
+                <ul>
+                    <li>Scored 80% in 10th Standard</li>
+                    <li>Subjects: Science, Mathematics, Social Studies, English</li>
+                    <li>Participated in Science Exhibitions</li>
+                </ul>
+            </div>
+            <div class="content-box">
+                <h2>12th Grade</h2>
+                <ul>
+                    <li>Scored 89% in 12th Standard</li>
+                    <li>Major Subjects: Physics, Chemistry, Biology, Mathematics</li>
+                    <li>Top performer in Mathematics Olympiad</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom-content">
+            <div class="content-box">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Programming: Python, JavaScript, C++</li>
+                    <li>Web Development: HTML, CSS, React, Node.js</li>
+                    <li>Database Management: SQL, Firebase</li>
+                </ul>
+            </div>
+            <div class="content-box">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Playing Chess & Badminton</li>
+                    <li>Reading Tech Blogs</li>
+                    <li>Traveling & Photography</li>
+                </ul>
+            </div>
+            <div class="content-box">
+                <h2>Extracurricular Activities</h2>
+                <ul>
+                    <li>Member of Coding Club</li>
+                    <li>Participated in Hackathons</li>
+                    <li>Volunteer for University Events</li>
+                    <li>Organized Technical Workshops</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/vijayadharshini23/" target="_blank">🔗 LinkedIn</a>
+        <a href="mailto:dharab1435@gmail.com">📧 Email</a>
+    </div>
+</body>
+</html>
