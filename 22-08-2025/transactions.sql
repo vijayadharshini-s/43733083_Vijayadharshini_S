@@ -1,0 +1,13 @@
+create database sathyabama;
+use sathyabama;
+create table cse(id int, name varchar(25));
+start transaction;
+insert into cse values(101, "viji");
+SAVEPOINT a12;
+insert into cse values(102, "som");
+savepoint a13;
+select * from cse;
+rollback to a12;
+select * from cse;
+commit;
+select * from cse;
