@@ -1,0 +1,103 @@
+package JavaStrings;
+
+public class JavaStrings {
+
+	    public static void main(String[] args) {
+	        System.out.println("===== String Creation =====");
+	        String s1 = "java";                                    // String literal
+	        char[] ch = { 's', 't', 'r', 'i', 'n', 'g' };
+	        String s2 = new String(ch);                             // char[] → String
+	        String s3 = new String("example");                      // new keyword
+	        System.out.println(s1);       // java
+	        System.out.println(s2);       // string
+	        System.out.println(s3);       // example
+
+
+	        System.out.println("\n===== Important String Methods =====");
+
+	        String str = "Sachin Tendulkar";
+
+	        // 1. charAt()
+	        System.out.println("charAt(0): " + str.charAt(0));       // S
+
+	        // 2. length()
+	        System.out.println("length(): " + str.length());         // 15
+
+	        // 3. substring()
+	        System.out.println("substring(0, 6): " + str.substring(0, 6)); // Sachin
+
+	        // 4. contains()
+	        System.out.println("contains(\"Tend\"): " + str.contains("Tend")); // true
+
+	        // 5. equals()
+	        System.out.println("equals(\"Sachin Tendulkar\"): " + str.equals("Sachin Tendulkar"));
+
+	        // 6. equalsIgnoreCase()
+	        System.out.println("equalsIgnoreCase(\"sachin tendulkar\"): " 
+	                + str.equalsIgnoreCase("sachin tendulkar"));
+
+	        // 7. isEmpty()
+	        System.out.println("\"\".isEmpty(): " + "".isEmpty());    // true
+
+	        // 8. concat()
+	        System.out.println("concat: " + "Hello ".concat("World")); // Hello World
+
+	        // 9. split()
+	        String[] words = str.split(" ");
+	        System.out.println("split(): ");
+	        for (String w : words) System.out.println(w);
+
+	        // 10. indexOf()
+	        System.out.println("indexOf('T'): " + str.indexOf('T'));   // 7
+
+	        // 11. toLowerCase()
+	        System.out.println("toLowerCase(): " + str.toLowerCase());
+
+	        // 12. toUpperCase()
+	        System.out.println("toUpperCase(): " + str.toUpperCase());
+
+	        // 13. trim()
+	        String spaced = "   Hello Java   ";
+	        System.out.println("trim(): [" + spaced.trim() + "]");
+
+	        // 14. valueOf()
+	        int a = 100;
+	        System.out.println("String.valueOf(100): " + String.valueOf(a));
+
+	        // 15. replace()
+	        String rep = "Java is fun. Java is powerful.";
+	        System.out.println("replace Java → Python: " + rep.replace("Java", "Python"));
+
+	        // 16. replaceAll()
+	        String r2 = "javatpoint is a very good website";
+	        System.out.println("replaceAll a → e: " + r2.replaceAll("a", "e"));
+
+	        // 17. startsWith()
+	        System.out.println("startsWith(\"Sa\"): " + str.startsWith("Sa")); // true
+
+	        // 18. endsWith()
+	        System.out.println("endsWith(\"kar\"): " + str.endsWith("kar"));   // true
+
+	        // 19. compareTo()
+	        System.out.println("\"Sachin\" compareTo \"Sachin\": " + "Sachin".compareTo("Sachin"));
+	        System.out.println("\"Sachin\" compareTo \"Ratan\": " + "Sachin".compareTo("Ratan"));
+
+
+	        System.out.println("\n===== == vs equals() =====");
+
+	        String t1 = "Hello";
+	        String t2 = "Hello";
+	        String t3 = new String("Hello");
+
+	        System.out.println("t1 == t2 : " + (t1 == t2));     // true → same pool
+	        System.out.println("t1 == t3 : " + (t1 == t3));     // false → new object
+	        System.out.println("t1.equals(t3): " + t1.equals(t3)); // true → same content
+
+
+	        System.out.println("\n===== intern() Method =====");
+
+	        String x = new String("Java");
+	        String y = x.intern();             // Moves to pool
+	        System.out.println("intern(): " + y);
+	    }
+	}

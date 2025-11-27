@@ -1,0 +1,66 @@
+package MultiThreading;
+import java.util.*;
+public class printarray {
+	public static void main(String[] args) {
+	int[] intArray = { 1, 2, 3, 4, 5 }; 
+
+	String intArrayString = Arrays.toString(intArray); 
+
+	System.out.println(intArray); 
+
+	System.out.println(intArrayString); 
+
+
+	// a, b, c 
+
+	}
+	
+}
+
+
+
+package MultiThreading;
+import java.util.Arrays;
+
+public class Contains_certain_element_ {
+	public static void main(String[] args) {
+		String[] stringArray = { "abc", "bcd", "cba", "dcb", "efg" }; 
+
+		 
+
+		boolean b = Arrays.asList(stringArray).contains("abc"); 
+
+		System.out.println(b); 
+	 
+	}
+}
+
+
+package MultiThreading;
+import java.util.*;
+
+public class Concatenate_Arrays {
+	public static void main(String[] args) {
+		int[] intArray = { 1, 2, 3, 4, 5 }; 
+		int[] intArray2 = { 6, 7, 8, 9, 10 }; 
+		int a[] = ArrayUtils.addAll(intArray, intArray2); 
+		String s = Arrays.toString(a); 
+		System.out.println(s); 
+
+	}
+}
+
+
+package MultiThreading;
+import java.util.*;
+
+public class Concatenate_Arrays {
+	public static void main(String[] args) {
+		int[] intArray = { 1, 2, 3, 4, 5 }; 
+		int[] intArray2 = { 6, 7, 8, 9, 10 }; 
+		int a[] = ArrayUtils.addAll(intArray, intArray2); 
+		String s = Arrays.toString(a); 
+		System.out.println(s); 
+
+	}
+}
