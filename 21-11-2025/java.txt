@@ -1,0 +1,207 @@
+package nov19;
+// METHOD OVERLOADING
+class Calculator {
+
+    void add(int a, int b) {
+        System.out.println("Sum (int,int): " + (a + b));
+    }
+
+    void add(double a, double b) {
+        System.out.println("Sum (double,double): " + (a + b));
+    }
+
+    void add(int a, int b, int c) {
+        System.out.println("Sum of 3 numbers: " + (a + b + c));
+    }
+}
+// ENCAPSULATION
+class BankAccount {
+
+    private String name;
+    private double balance;
+
+    void setName(String n) {
+        name = n;
+    }
+
+    void setBalance(double b) {
+        balance = b;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    double getBalance() {
+        return balance;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Balance: " + balance);
+    }
+}
+// ABSTRACTION USING ABSTRACT CLASS
+abstract class Animal {
+    abstract void sound(); // abstract method
+
+    void sleep() { // normal method
+        System.out.println("Animal is sleeping...");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks!");
+    }
+}
+// ABSTRACTION USING INTERFACE
+interface MyVehicle {
+    void start();
+    void stop();
+}
+
+class Car implements MyVehicle {
+
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+
+    public void stop() {
+        System.out.println("Car stopped.");
+    }
+}
+// MAIN CLASS
+public class Overloading {
+    public static void main(String[] args) {
+
+        // --- METHOD OVERLOADING ---
+        Calculator c = new Calculator();
+        c.add(10, 20);
+        c.add(10.5, 20.5);
+        c.add(1, 2, 3);
+
+        // --- ENCAPSULATION ---
+        BankAccount acc = new BankAccount();
+        acc.setName("Aditi");
+        acc.setBalance(50000);
+        acc.display();
+
+        // --- ABSTRACT CLASS  ---
+        Animal d = new Dog();
+        d.sound();
+        d.sleep();
+
+        // --- INTERFACE ---
+        Car v = new Car();
+        v.start();
+        v.stop();
+    }
+}
+
+
+
+package nov19;
+
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        // 1. ArithmeticException
+        try {
+            int a = 10;
+            int b = 0;
+            int result = a / b; 
+            System.out.println(result);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("ArithmeticException caught: " + e.getMessage());
+        }
+        finally {
+            System.out.println("Finally executed (ArithmeticException)");
+        }
+
+        System.out.println("----------------------------------------");
+        // 2. NullPointerException
+        try {
+            String s = null;
+            System.out.println(s.length()); 
+        }
+        catch (NullPointerException e) {
+            System.out.println("NullPointerException caught: " + e.getMessage());
+        }
+        finally {
+            System.out.println("Finally executed (NullPointerException)");
+        }
+
+        System.out.println("----------------------------------------");
+        // 3. NumberFormatException
+        try {
+            String n = "12A3"; // invalid number
+            int x = Integer.parseInt(n);
+            System.out.println(x);
+        }
+        catch (NumberFormatException e) {
+            System.out.println("NumberFormatException caught: " + e.getMessage());
+        }
+        finally {
+            System.out.println("Finally executed (NumberFormatException)");
+        }
+
+        System.out.println("----------------------------------------");
+        // 4. ArrayIndexOutOfBoundsException
+        try {
+            int arr[] = {10, 20, 30};
+            System.out.println(arr[5]); // invalid index
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException caught: " + e.getMessage());
+        }
+        finally {
+            System.out.println("Finally executed (ArrayIndexOutOfBoundsException)");
+        }
+    }
+}
+
+
+package nov19;
+
+// Parent class
+class BasicCalculator {
+
+    void add(int a, int b) {
+        System.out.println("Addition: " + (a + b));
+    }
+
+    void subtract(int a, int b) {
+        System.out.println("Subtraction: " + (a - b));
+    }
+}
+
+// Child class
+class AdvancedCalculator extends BasicCalculator {
+
+    void multiply(int a, int b) {
+        System.out.println("Multiplication: " + (a * b));
+    }
+
+    void divide(int a, int b) {
+        if (b == 0) {
+            System.out.println("Cannot divide by zero!");
+        } else {
+            System.out.println("Division: " + (a / b));
+        }
+    }
+}
+
+// Main class
+public class CalculatorInheritance {
+    public static void main(String[] args) {
+
+        AdvancedCalculator calc = new AdvancedCalculator();
+
+        calc.add(10, 20);
+        calc.subtract(40, 15);
+        calc.multiply(5, 6);
+        calc.divide(50, 5);
+    }
+}
